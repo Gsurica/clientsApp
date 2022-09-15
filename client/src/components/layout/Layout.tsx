@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-
+import { AsideMenu } from "../AsideMenu/AsideMenu";
 
 interface LayoutProps {
     header?: ReactNode;
@@ -8,8 +8,11 @@ interface LayoutProps {
 }
 export const Layout: React.FC<LayoutProps> = ({ header, children, footer }) => {
     return (
-        <div>
+        <div className={`
+        relative
+        `}>
             { header }
+            <AsideMenu />
             { children }
             { footer }
         </div>
